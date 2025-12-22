@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | My Portfolio</title>
+    <meta name="description" content="My Projects">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nohemi:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+<body>
+    <header><a href="index.html"><img src="assets/logo/logo-transparent-1.png" alt="Logo" class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="projects.html" style="color: var(--accent-color)">Projects</a></li>
+                <li><a href="atelier.html">Atelier</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sub-Navigation (Pseudo-Header) -->
+    <div class="sub-nav">
+        <ul>
+            <li><a href="projects.html" class="active">All</a></li>
+            <li><a href="domain-projects/web-dev.html">Web Development</a></li>
+            <li><a href="domain-projects/fintech.html">Fintech</a></li>
+            <li><a href="domain-projects/it.html">IT & Infrastructure</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Short Hero with Quote -->
+        <section class="project-hero fade-in">
+            <blockquote class="quote stagger-1">
+                "The best way to predict the future is to invent it."
+                <span class="quote-author">– Alan Kay</span>
+            </blockquote>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section stagger-2">
+            <h2 class="section-title text-center">Technical Arsenal</h2>
+            <div class="skills-grid">
+                <!-- Top Row: Icons -->
+                <div class="skill-item">
+                    <i class="devicon-javascript-plain skill-icon"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-item">
+                    <i class="devicon-typescript-plain skill-icon"></i>
+                    <span>TypeScript</span>
+                </div>
+                <div class="skill-item">
+                    <i class="devicon-react-original skill-icon"></i>
+                    <span>React</span>
+                </div>
+                <div class="skill-item">
+                    <i class="devicon-nextjs-original-wordmark skill-icon"></i>
+                    <span>Next.js</span>
+                </div>
+                <div class="skill-item">
+                    <i class="devicon-nodejs-plain skill-icon"></i>
+                    <span>Node.js</span>
+                </div>
+                <div class="skill-item">
+                    <i class="devicon-python-plain skill-icon"></i>
+                    <span>Python</span>
+                </div>
+
+                <!-- Break -->
+                <div class="skills-break"></div>
+
+                <!-- Bottom Row: Other Skills -->
+                <div class="skill-item">AWS / Cloud</div>
+                <div class="skill-item">DevOps & CI/CD</div>
+                <div class="skill-item">Database Design</div>
+                <div class="skill-item">UI/UX Design</div>
+                <div class="skill-item">System Arch.</div>
+            </div>
+        </section>
+
+        <h2 class="section-title text-center">Recent Work</h2>
+
+        <div class="grid-container stagger-3">
+            <!-- Completed Project -->
+            <div class="card">
+                <span class="project-status status-completed">Completed</span>
+                <h3>Payment Gateway Integration</h3>
+                <div style="margin: var(--spacing-sm) 0;">
+                    <span
+                        style="font-size: 0.8rem; border: 1px solid var(--text-secondary); padding: 2px 8px; border-radius: 12px;">Fintech</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md)">
+                    A secure payment processing microservice handling multi-currency transactions and webhook events for
+                    a global e-commerce client.
+                </p>
+                <div style="display: flex; gap: var(--spacing-sm);">
+                    <a href="domain-projects/fintech.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- Active Project -->
+            <div class="card">
+                <span class="project-status status-active">Active</span>
+                <div style="font-size: 0.75rem; color: #ffc107; margin-bottom: 5px;">Milestone: v2.0 Beta</div>
+                <h3>Crypto Portfolio Tracker</h3>
+                <div style="margin: var(--spacing-sm) 0;">
+                    <span
+                        style="font-size: 0.8rem; border: 1px solid var(--text-secondary); padding: 2px 8px; border-radius: 12px;">Web3</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md)">
+                    Real-time dashboard tracking cryptocurrency asset values. Currently implementing wallet connect
+                    features for v2.0.
+                </p>
+                <div style="display: flex; gap: var(--spacing-sm);">
+                    <a href="domain-projects/fintech.html" class="btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Luthando. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

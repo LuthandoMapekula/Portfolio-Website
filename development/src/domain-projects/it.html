@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT & Infrastructure Projects | My Portfolio</title>
+    <meta name="description" content="Projects in IT and Infrastructure">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nohemi:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header><a href="../index.html"><img src="../assets/logo/logo-transparent-1.png" alt="Logo" class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="../projects.html" style="color: var(--accent-color)">Projects</a></li>
+                <li><a href="../atelier.html">Atelier</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sub-Navigation (Pseudo-Header) -->
+    <div class="sub-nav">
+        <ul>
+            <li><a href="../projects.html">All</a></li>
+            <li><a href="web-dev.html">Web Development</a></li>
+            <li><a href="fintech.html">Fintech</a></li>
+            <li><a href="it.html" class="active">IT & Infrastructure</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <h1 class="section-title">IT & Infrastructure</h1>
+
+        <div class="grid-container">
+            <!-- Project 1 -->
+            <div class="card">
+                <h3>Automated Network Monitor</h3>
+                <div style="margin: var(--spacing-sm) 0;">
+                    <span
+                        style="font-size: 0.8rem; border: 1px solid var(--text-secondary); padding: 2px 8px; border-radius: 12px;">Python</span>
+                    <span
+                        style="font-size: 0.8rem; border: 1px solid var(--text-secondary); padding: 2px 8px; border-radius: 12px;">Ansible</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md)">
+                    A system to monitor server health and automate response to common network incidents.
+                </p>
+                <div style="display: flex; gap: var(--spacing-sm);">
+                    <a href="#" class="btn">GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="card">
+                <h3>Cloud Migration Script</h3>
+                <div style="margin: var(--spacing-sm) 0;">
+                    <span
+                        style="font-size: 0.8rem; border: 1px solid var(--text-secondary); padding: 2px 8px; border-radius: 12px;">Bash</span>
+                    <span
+                        style="font-size: 0.8rem; border: 1px solid var(--text-secondary); padding: 2px 8px; border-radius: 12px;">AWS
+                        CLI</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md)">
+                    Scripts to automate the migration of on-premise databases to AWS RDS with zero downtime.
+                </p>
+                <div style="display: flex; gap: var(--spacing-sm);">
+                    <a href="#" class="btn">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Luthando. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

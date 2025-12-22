@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Projects | My Portfolio</title>
+    <meta name="description" content="Projects in specific domain">
+    <!-- Note: CSS path changes because this file is in a subdirectory -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header><a href="../index.html"><img src="../assets/logo/logo-transparent-1.png" alt="Logo" class="logo"></a><nav>
+            <ul>
+                <li><a href="../projects.html" style="color: var(--accent-color)">Projects</a></li>
+                <li><a href="../atelier.html">Atelier</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Breadcrumb for navigation -->
+        <div style="margin-bottom: var(--spacing-lg);">
+            <a href="../projects.html" style="color: var(--text-secondary);">&larr; Back to all projects</a>
+        </div>
+
+        <h1 class="section-title">Web Development Projects</h1>
+
+        <div class="grid-container">
+            <!-- Project 1 -->
+            <div class="card">
+                <h3>Project Name</h3>
+                <div style="margin: var(--spacing-sm) 0;">
+                    <span
+                        style="font-size: 0.8rem; border: 1px solid var(--text-secondary); padding: 2px 8px; border-radius: 12px;">React</span>
+                    <span
+                        style="font-size: 0.8rem; border: 1px solid var(--text-secondary); padding: 2px 8px; border-radius: 12px;">Node.js</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md)">
+                    A brief description of this specific project and what technology stack was used.
+                </p>
+                <div style="display: flex; gap: var(--spacing-sm);">
+                    <a href="https://github.com/username/repo" target="_blank" class="btn">GitHub</a>
+                    <a href="#" class="btn"
+                        style="border-color: var(--text-secondary); color: var(--text-primary);">Live Demo</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="card">
+                <h3>Another Project</h3>
+                <div style="margin: var(--spacing-sm) 0;">
+                    <span
+                        style="font-size: 0.8rem; border: 1px solid var(--text-secondary); padding: 2px 8px; border-radius: 12px;">HTML/CSS</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md)">
+                    Description of another cool project.
+                </p>
+                <div style="display: flex; gap: var(--spacing-sm);">
+                    <a href="https://github.com/username/repo" target="_blank" class="btn">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Luthando. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

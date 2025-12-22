@@ -25,12 +25,17 @@
         <!-- Hero Section -->
         <section class="gallery-hero fade-in">
             <div class="hero-content">
-                <h1 class="stagger-1">Digital Worlds</h1>
-                <p class="stagger-2">Exploring the boundaries of imagination through traditional and digital mediums.
+                <h1 class="stagger-1">Creative Direction</h1>
+                <p class="stagger-2">In the era of unanchored momentum, pure traditional skill can be the differentiator
+                    between <span class="cycle-word" data-final="craftmanship">craftmanship</span> and <span
+                        class="cycle-word" data-final="anomaly">anomaly</span>.
                 </p>
-                <a href="https://www.artstation.com/" target="_blank" class="artstation-link stagger-3">
-                    <img src="https://cdn.icon-icons.com/icons2/2428/PNG/512/artstation_black_logo_icon_147132.png"
-                        alt="ArtStation" class="artstation-icon">
+                <a href="https://www.artstation.com/lutha-m" target="_blank" class="artstation-link stagger-3">
+                    <svg class="artstation-icon" viewBox="0 0 24 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0 17.723l2.027 3.505a2.424 2.424 0 0 0 2.078 1.196h10.476L11.5 17.723H0zm24 .023L18.038 6.548a2.424 2.424 0 0 0-2.078-1.196H13.5l8.5 14.742v-2.348zm-12.5-5.746L7.417 6.548 3.333 14.277h8.167z" />
+                    </svg>
                     View on ArtStation
                 </a>
             </div>
@@ -41,12 +46,17 @@
         <section class="gallery-section">
             <h2 class="section-title">Featured Project</h2>
             <div class="project-showcase">
-                <div class="project-thumbnail" onclick="openProjectModal('project1')">
-                    <img src="assets/images/project-thumb-1.png" alt="Neon Blade Concept">
+                <div class="project-header">
+                    <a href="https://www.artstation.com/artwork/OyROA8" target="_blank" class="project-artstation-link">
+                        Project: Odyssey on Artstation
+                    </a>
+                </div>
+                <div class="project-thumbnail" onclick="toggleProjectDetails('project1')">
+                    <img src="assets/images/atelier-project/luthando-mapekula-img-preview.jpg" alt="Project: Odyssey">
                     <div class="project-info">
-                        <h3>Neon Blade</h3>
+                        <h3>Project: Odyssey</h3>
                         <p>Character Concept Art</p>
-                        <span class="view-btn">View Project</span>
+                        <span class="view-btn">Preview</span>
                     </div>
                 </div>
             </div>
@@ -57,46 +67,45 @@
             <h2 class="section-title">Best Of Collection</h2>
             <div class="carousel-grid">
                 <!-- Grid Item 1 -->
-                <a href="https://www.artstation.com/" target="_blank" class="carousel-item">
-                    <div class="placeholder-art" style="background: linear-gradient(45deg, #2a1a1a, #cf9d7b);">Sci-Fi
-                        City</div>
+                <a href="https://www.artstation.com/artwork/J42O0" target="_blank" class="carousel-item">
+                    <img src="assets/images/luthando-mapekula-bfa.jpg" alt="Branding - Luthando Mapekula BFA">
                     <div class="carousel-overlay">
-                        <span>Cyber City</span>
+                        <span>Branding</span>
                     </div>
                 </a>
                 <!-- Grid Item 2 -->
-                <a href="https://www.artstation.com/" target="_blank" class="carousel-item">
-                    <div class="placeholder-art" style="background: linear-gradient(45deg, #0c1519, #2a2a2a);">Dragon
-                        Cliff</div>
+                <a href="https://www.artstation.com/artwork/Loq1w" target="_blank" class="carousel-item">
+                    <img src="assets/images/luthando-mapekula-character design.jpg"
+                        alt="Character Design - Luthando Mapekula">
                     <div class="carousel-overlay">
-                        <span>The Watcher</span>
+                        <span>Character Design</span>
                     </div>
                 </a>
                 <!-- Grid Item 3 -->
-                <a href="https://www.artstation.com/" target="_blank" class="carousel-item">
-                    <div class="placeholder-art" style="background: linear-gradient(45deg, #131f24, #4adbc1);">Forest
-                        Glade</div>
+                <a href="https://www.artstation.com/artwork/RY3YkW" target="_blank" class="carousel-item">
+                    <img src="assets/images/luthando-mapekula-illustration.jpg" alt="Illustration - Luthando Mapekula">
                     <div class="carousel-overlay">
-                        <span>Magic Forest</span>
+                        <span>Illustration</span>
                     </div>
                 </a>
             </div>
         </section>
     </main>
 
-    <!-- Simple Modal for Project Expansion -->
-    <div id="project-modal" class="modal">
-        <span class="close-modal" onclick="closeProjectModal()">&times;</span>
+    <!-- Collapsible Project Details -->
+    <div id="project-details-project1" class="project-details">
         <div class="modal-content">
-            <img src="assets/images/project-thumb-1.png" alt="Full Project" class="modal-image">
+            <img src="assets/images/atelier-project/luthando-mapekula-img-preview.jpg" alt="Full Project"
+                class="modal-image">
             <div class="modal-text">
-                <h2>Neon Blade</h2>
+                <h2>Project: Odyssey</h2>
                 <p>A deep dive into futuristic character design. Mixing traditional brush textures with cyberpunk
                     aesthetics.</p>
                 <p>Tools used: Photoshop, Blender.</p>
             </div>
         </div>
     </div>
+
 
     <footer>
         <p>&copy; 2025 Luthando. All rights reserved.</p>

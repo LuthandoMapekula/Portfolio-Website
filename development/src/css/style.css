@@ -236,14 +236,15 @@ footer {
 /* Gallery Hero */
 .gallery-hero {
     position: relative;
-    height: 70vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('../assets/images/gallery-hero.png');
+    background-image: url('../assets/images/luthando-mapekula-wallpaper.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     text-align: center;
     overflow: hidden;
 }
@@ -254,7 +255,10 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(rgba(12, 21, 25, 0.3), rgba(12, 21, 25, 1));
+    background: linear-gradient(to bottom,
+            rgba(12, 21, 25, 0.4) 0%,
+            rgba(12, 21, 25, 0.6) 50%,
+            rgba(12, 21, 25, 0.95) 100%);
     z-index: 1;
 }
 
@@ -262,6 +266,21 @@ footer {
     position: relative;
     z-index: 2;
     padding: var(--spacing-lg);
+    max-width: 900px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: var(--spacing-lg);
 }
 
 .artstation-link {
@@ -286,18 +305,37 @@ footer {
 .artstation-icon {
     width: 20px;
     height: 20px;
-    filter: invert(81%) sepia(21%) saturate(963%) hue-rotate(334deg) brightness(88%) contrast(84%);
-    /* Match accent approx */
+    fill: currentColor;
 }
 
 .artstation-link:hover .artstation-icon {
-    filter: brightness(0);
-    /* Black icon on hover */
+    fill: var(--bg-primary);
 }
 
 /* Featured Project */
 .project-showcase {
     margin-top: var(--spacing-lg);
+}
+
+.project-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: var(--spacing-md);
+}
+
+.project-artstation-link {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.project-artstation-link:hover {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
 }
 
 .project-thumbnail {
@@ -352,6 +390,23 @@ footer {
     border-radius: 8px;
     overflow: hidden;
     display: block;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item:hover img {
+    transform: scale(1.05);
 }
 
 .placeholder-art {
@@ -377,6 +432,8 @@ footer {
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .carousel-item:hover .carousel-overlay {
@@ -410,6 +467,43 @@ footer {
     border-radius: 8px;
     overflow: hidden;
     position: relative;
+}
+
+/* Collapsible Project Details */
+.project-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    margin-top: var(--spacing-md);
+    border: 1px solid var(--border-color);
+}
+
+.project-details.open {
+    max-height: 1000px;
+    padding: var(--spacing-lg);
+}
+
+.project-details .modal-content {
+    margin: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    width: 100%;
+    max-width: none;
+}
+
+.project-details .modal-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.project-details .modal-text {
+    padding: var(--spacing-md) 0 0 0;
+    color: var(--text-primary);
 }
 
 .modal-image {

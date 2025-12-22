@@ -12,29 +12,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Add more interactive logic here as needed
+    setTimeout(initWordCycle, 1500);
 });
 
+/* Word Cycling Animation */
+function initWordCycle() {
+    const cycleElements = document.querySelectorAll('.cycle-word');
+    const fillerWords = ["design", "chaos", "artistry", "glitch", "structure", "noise", "vision", "code"];
+
+    cycleElements.forEach(el => {
+        const finalWord = el.getAttribute('data-final');
+        let cycles = 0;
+        const maxCycles = 15; // Number of flips before settling
+
+        const interval = setInterval(() => {
+            el.textContent = fillerWords[Math.floor(Math.random() * fillerWords.length)];
+            cycles++;
+
+            if (cycles >= maxCycles) {
+                clearInterval(interval);
+                el.textContent = finalWord;
+            }
+        }, 500);
+    });
+}
+
 /* Gallery Modal Logic */
-function openProjectModal(projectId) {
-    const modal = document.getElementById('project-modal');
-    if (modal) {
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden'; // Prevent scrolling background
+// Toggle collapsible project details
+function toggleProjectDetails(projectId) {
+    const details = document.getElementById('project-details-' + projectId);
+    if (details) {
+        details.classList.toggle('open');
     }
 }
 
-function closeProjectModal() {
-    const modal = document.getElementById('project-modal');
-    if (modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Restore scrolling
-    }
-}
-
-// Close modal if clicking outside content
-window.onclick = function (event) {
-    const modal = document.getElementById('project-modal');
-    if (event.target == modal) {
-        closeProjectModal();
-    }
-}

@@ -9,8 +9,6 @@ updated: 2025-12-22T07:58:00
 ---
 ---
 # Portfolio-Website: Project Documentation
-[[Git]] Project: Portfolio Website
-
 Project Purpose
 This site acts as the "digital centerpiece" of the work I produce. We have:
 1. Technical Work (Projects Page): Highlighting the technical projects which are up on GitHub.
@@ -29,3 +27,5 @@ Technical Architecture (Vanilla Tech stack)
 - Structure: HTML
 - Styling: CSS
 - Functionality: Javascript
+
+[[Git | Git Project: Portfolio Website]] 

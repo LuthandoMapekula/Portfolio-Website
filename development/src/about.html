@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | My Portfolio</title>
     <meta name="description" content="About Me and Resume">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header><a href="index.html"><img src="assets/logo/logo-transparent-1.png" alt="Logo" class="logo"></a><nav>
+    <header>
+        <p class="header-text">Luthando Mapekula</p>
+
+        <a href="index.html"><img src="assets/logo/p-logo/logoName-white-gif.gif" alt="Logo" class="logo"></a>
+        
+        <nav>
             <ul>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="atelier.html">Atelier</a></li>
@@ -20,50 +26,110 @@
     </header>
 
     <main>
-        <h1 class="section-title">About Me</h1>
+        <section class="about-hero fade-in">
+            <h1 class="section-title">About Me</h1>
 
-        <div
-            style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
-            <div>
-                <h3>Who am I?</h3>
-                <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);">
-                    I am a passionate developer currently expanding my skills in various domains of technology.
-                </p>
-                <a href="#" class="btn">Download Resume</a>
-            </div>
+            <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); margin-bottom: var(--spacing-xl); position: relative;">
+                <div>
+                    <h3>Who am I?</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);">
+                        Detail-orientated with a background in Applied Mathematics, Computer Science and Statsistics. 
+                        Adept at applying rigorous mathematical logic to large contextual datasets to identify trends and provide the actonable insights that drive operational efficiency. 
+                        Currently expanding my skills and toolset to feed my unique blend of creative and analytical thinking.
+                    </p>
+                    <a href="#" class="btn">Download Resume</a>
+                </div>
 
-            <div class="card">
-                <h3>Contact</h3>
-                <p style="margin-bottom: var(--spacing-sm);">📧 Email: luthando@example.com</p>
-                <p style="margin-bottom: var(--spacing-sm);">🔗 LinkedIn: linkedin.com/in/luthando</p>
-                <p style="margin-bottom: var(--spacing-sm);">🐙 GitHub: github.com/luthando</p>
+                <div class="card">
+                    <h3>Contact</h3>
+                    <!-- <p style="margin-bottom: var(--spacing-sm);">📧 Email: ex@example.com</p> -->
+                    <p style="margin-bottom: var(--spacing-sm);">🎨 ArtStation</p>
+                    <p style="margin-bottom: var(--spacing-sm);">👾 GitHub</p>
+                    <p style="margin-bottom: var(--spacing-sm);">💼 LinkedIn</p>
+                </div>
             </div>
-        </div>
+        </section>
 
         <h2 class="section-title">Experience & Skills</h2>
         <div class="grid-container">
             <div class="card">
-                <h4>Frontend</h4>
+                <h4>Skills</h4>
                 <ul style="list-style-position: inside; color: var(--text-secondary);">
-                    <li>HTML/CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>C++, Java, Python</li>
+                    <li>SQL</li>
                 </ul>
             </div>
             <div class="card">
-                <h4>Backend</h4>
+                <h4>Domains</h4>
                 <ul style="list-style-position: inside; color: var(--text-secondary);">
-                    <li>Node.js</li>
-                    <li>Python</li>
-                    <li>Databases</li>
+                    <li>IT Service Management</li>
+                    <li>Networking</li>
+                    <li>Web Development</li>
                 </ul>
             </div>
         </div>
+        <!-- Online badges carousel-->
+        <div class="carousel-loop" style="margin-top: var(--spacing-lg);">
+            <div class="carousel-loop-item">
+                <img src="assets/icons/Achievements/achieve-icon-Ignite-Fabric.png" alt="Ignite Edition with Microsoft Fabric">
+            </div>
+            <div class="carousel-loop-item">
+                <img src="assets/badges/freecodecamp-javascript-algorithms.png" alt="FreeCodeCamp JavaScript Algorithms">
+            </div>
+            <div class="carousel-loop-item">
+                <img src="assets/badges/cisco-it-fundamentals.png" alt="Cisco IT Fundamentals">
+            </div>
+            <div class="carousel-loop-item">
+                <img src="assets/badges/microsoft-azure-fundamentals.png" alt="Microsoft Azure Fundamentals">
+            </div>
+            <div class="carousel-loop-item">
+                <img src="assets/badges/google-it-support.png" alt="Google IT Support">
+            </div>
 
+
+            <div class="carousel-loop-item">
+                <img src="assets/icons/Achievements/achieve-icon-Ignite-Fabric.png" alt="Ignite Edition with Microsoft Fabric">
+            </div>
+            <div class="carousel-loop-item">
+                <img src="assets/badges/freecodecamp-javascript-algorithms.png" alt="FreeCodeCamp JavaScript Algorithms">
+            </div>
+            <div class="carousel-loop-item">
+                <img src="assets/badges/cisco-it-fundamentals.png" alt="Cisco IT Fundamentals">
+            </div>
+            <div class="carousel-loop-item">
+                <img src="assets/badges/microsoft-azure-fundamentals.png" alt="Microsoft Azure Fundamentals">
+            </div>
+            <div class="carousel-loop-item">
+                <img src="assets/badges/google-it-support.png" alt="Google IT Support">
+            </div>
+        </div>
+        <!-- Experience section -->
+        <div class="card" style="margin-top: var(--spacing-lg);">
+            <h3>Experience</h3>
+            <ul style="list-style-position: inside; color: var(--text-secondary);">
+                    <li>Data Analyst, Nkqubela Technologies. East London, South Africa. 2025 - Producing timely analytical reports to guide operational decisions.</li>
+                    <li>Experience, Location, Year - Brief description of role and achievements.</li>
+                    <li>Experience, Location, Year - Brief description of role and achievements.</li>
+                </ul>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Luthando. All rights reserved.</p>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/luthando" target="_blank"><i class="fa-brands fa-linkedin"></i></a> |
+            <a href="https://github.com/luthando" target="_blank"><i class="fa-brands fa-github"></i></a> |
+            <a href="https://www.artstation.com/lutha-m" target="_blank"><i class="fa-brands fa-artstation"></i></a>
+        </div>
+        <div class="footer-legal">
+            <p>&copy; 2026 Luthando Mapekula. All rights reserved. Data Analyst & Visual Artist</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Return Policy</a> |
+                <a href="#">Terms of Service</a> 
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>

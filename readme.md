@@ -5,7 +5,8 @@ date: 2025-12-22T07:58:00
 version: v0.3.0
 status: active
 priority: medium
-updated: 2025-12-22T07:58:00
+updated: 2026-01-06T16:26:00
+title: Portfolio-Website
 ---
 ---
 # Portfolio-Website: Project Documentation

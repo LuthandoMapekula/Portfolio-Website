@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-
+ 
     // Add more interactive logic here as needed
     setTimeout(initWordCycle, 1500);
 });

@@ -757,3 +757,47 @@ footer {
     opacity: 0.5; /* Set to 1 temporarily to see if it appears at all */
     z-index: -1;   /* Places it behind your text */
 }
+
+/* Specific styling for the policy content to ensure readability */
+    .legal-container {
+            max-width: 800px;
+            margin: var(--spacing-xl) 0;
+            line-height: 1.8;
+        }
+        .legal-section {
+            margin-bottom: 80px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+            scroll-margin-top: 100px; /* Ensures the header doesn't cover the title when jumping to anchors */
+        }
+        .legal-section h2 {
+            margin-bottom: var(--spacing-md);
+            color: var(--text-primary);
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .policy-subheading {
+            margin-top: var(--spacing-lg);
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .legal-container p, .legal-container li {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        .legal-container ul {
+            padding-left: 20px;
+            margin-bottom: var(--spacing-md);
+        }
+        .architect-note {
+            border-left: 3px solid var(--text-primary);
+            padding-left: 20px;
+            margin-bottom: 30px;
+            font-style: italic;
+            color: var(--text-primary);
+        }
+        html {
+            scroll-behavior: smooth;
+        }

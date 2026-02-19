@@ -1,0 +1,59 @@
+{
+  "domain-01": {
+    "title": "Project Title",
+    "status": "Project Status",
+    "statusClass": "status-completed/ status-active/ status-upcoming",
+    "category": "Domain Name",
+    "description": "Elevator pitch description of the project.",
+    "link": "domain-projects/template.html"
+  },
+  "it-01": {
+    "title": "Library Database System",
+    "status": "Completed",
+    "statusClass": "status-completed",
+    "category": "IT Service Management",
+    "description": "A secure database system for managing library resources and user access.",
+    "link": "domain-projects/it.html"
+  },
+  "iot-01": {
+    "title": "Industrial IoT Monitoring System",
+    "status": "Completed",
+    "statusClass": "status-completed",
+    "category": "Industrial IoT",
+    "description": "An IoT monitoring system for tracking and managing industrial equipment performance and maintenance schedules.",
+    "link": "domain-projects/it.html"
+  },
+  "web-dev-01": {
+    "title": "Online Student Portal",
+    "status": "Completed",
+    "statusClass": "status-completed",
+    "milestone": "v2.0 Beta",
+    "category": "Web Development",
+    "description": "Web-based student portal providing access to academic records, announcements, and service requests.",
+    "link": "domain-projects/web-dev.html"
+  },
+  "data-01": {
+    "title": "Data Warehouse & Analytics Platform",
+    "status": "Completed",
+    "statusClass": "status-completed",
+    "category": "Data Infrastructure & Engineering",
+    "description": "A comprehensive data warehouse and analytics platform for processing and visualizing large-scale datasets.",
+    "link": "domain-projects/data.html"
+  },
+  "fintech-01": {
+    "title": "Fintech Analytics Dashboard",
+    "status": "Completed",
+    "statusClass": "status-completed",
+    "category": "Fintech & Quantitative Analysis",
+    "description": "A comprehensive dashboard for analyzing financial data and generating insights for investment decisions.",
+    "link": "domain-projects/fintech.html"
+  },
+  "research-01": {
+    "title": "Research & Aerospace",
+    "status": "Completed",
+    "statusClass": "status-completed",
+    "category": "Research & Aerospace",
+    "description": "A research and aerospace project focused on advanced engineering and scientific analysis.",
+    "link": "domain-projects/research.html"
+  }
+}

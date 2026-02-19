@@ -510,6 +510,38 @@ footer {
     transform: scale(1.1);
 }
 
+/* --- Experience Section --- */
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.exp-sub {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+/* New: Styles for the list of achievements */
+.exp-list {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    padding-left: 1.2rem;
+    margin: 10px 0;
+}
+
+.exp-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.exp-list strong {
+    color: var(--text-primary); /* Makes the 'Impact keywords' stand out */
+}
+
+
 /* Modal */
 .modal {
     display: none;
@@ -673,6 +705,11 @@ footer {
 }
 
 .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     background-color: var(--bg-secondary);
     padding: var(--spacing-md);
     border-radius: 8px;
@@ -688,6 +725,7 @@ footer {
 
 .skill-icon {
     font-size: 3rem;
+    margin: 0 auto 0.75rem;
     margin-bottom: var(--spacing-sm);
     display: block;
 }

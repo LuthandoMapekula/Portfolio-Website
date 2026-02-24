@@ -6,7 +6,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-65FPGWNM4L"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'G-65FPGWNM4L');
@@ -17,7 +17,6 @@
     <meta name="description" content="My Art Portfolio">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nohemi:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -25,11 +24,11 @@
         <p class="header-text">Visual Artist</p>
 
         <a href="index.html"><img src="assets/logo/p-logo/logoName-black-gif.gif" alt="Logo" class="logo"></a>
-        
+
         <nav>
             <ul>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="atelier.html" style="color: var(--accent-color)">Atelier</a></li>
+                <li><a href="atelier.html" class="text-accent">Atelier</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
@@ -41,10 +40,11 @@
             <div class="hero-content">
                 <h1 class="stagger-1">Creative Direction</h1>
                 <p class="stagger-2">In the era of unanchored momentum, pure traditional skill can be the differentiator
-                    between <span class="cycle-word" data-final="craftmanship">craftmanship</span> and <span
-                        class="cycle-word" data-final="anomaly">anomaly</span>.
+                    between <span class="cycle-word" data-set="positive" data-final="craftsmanship">craftsmanship</span>
+                    and <span class="cycle-word" data-set="negative" data-final="anomaly">anomaly</span>.
                 </p>
-                <a href="https://www.artstation.com/lutha-m" target="_blank" class="artstation-link stagger-3">
+                <a href="https://www.artstation.com/lutha-m" target="_blank" rel="noopener noreferrer"
+                    class="artstation-link stagger-3" aria-label="View Luthando Mapekula on Artstation">
                     <svg class="artstation-icon" viewBox="0 0 24 24" fill="currentColor"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -59,28 +59,70 @@
         <!-- Main Project Section (Expandable) -->
         <section class="gallery-section">
             <h2 class="section-title">Featured Project</h2>
-            <div class="project-showcase">
-                <div class="project-header">
-                    <a href="https://www.artstation.com/artwork/OyROA8" target="_blank" class="project-artstation-link">
-                        Project: Odyssey on Artstation
+
+            <article class="project-showcase" data-project-id="project1">
+                <header class="project-header">
+                    <a href="https://www.artstation.com/artwork/OyROA8" target="_blank" rel="noopener noreferrer"
+                        class="project-artstation-link" aria-label="View Project: Odyssey on ArtStation">
+                        Project: Odyssey on ArtStation
                     </a>
-                </div>
-                <div class="project-thumbnail" onclick="toggleProjectDetails('project1')">
-                    <img src="assets/images/atelier-project/luthando-mapekula-img-preview.jpg" alt="Project: Odyssey">
+                </header>
+
+                <button class="project-thumbnail" type="button" data-toggle="project1" aria-expanded="false"
+                    aria-controls="project-details-project1">
+                    <img src="assets/images/atelier-project/luthando-mapekula-img-preview.jpg"
+                        alt="Preview of Project Odyssey character concept art" loading="lazy" />
+
                     <div class="project-info">
                         <h3>Project: Odyssey</h3>
                         <p>Character Concept Art</p>
-                        
                         <span class="view-btn">Preview</span>
-                        <!-- <a herf="#project-details-project1">
-                            <button>
-                                <span class="view-btn">Preview</span>
-                            </button>
-                        </a> -->
+                    </div>
+                </button>
+
+                <!-- Expandable Content 
+                <div id="project-details-project1" class="project-expansion-grid" hidden>
+                    <div class="expansion-row full-width">
+                        <img src="assets/images/atelier-project/luthando-mapekula-img-preview.jpg"
+                            alt="Full Width Visual" class="expansion-img">
+                    </div>
+
+                    <div class="expansion-row split-content">
+                        <div class="expansion-text-block">
+                            <h3>Design Philosophy</h3>
+                            <p>
+                                A character exploration project focused on silhouette design, material language,
+                                and sci-fi narrative worldbuilding.
+                            </p>
+                        </div>
+                        <div class="expansion-asset-block">
+                            <img src="assets/images/luthando-mapekula-character design.jpg" alt="Process Asset 1"
+                                class="expansion-img">
+                        </div>
+                    </div>
+
+                    <div class="expansion-row split-content reverse">
+                        <div class="expansion-asset-block">
+                            <img src="assets/images/luthando-mapekula-illustration.jpg" alt="Process Asset 2"
+                                class="expansion-img">
+                        </div>
+                        <div class="expansion-text-block">
+                            <h3>Technical Implementation</h3>
+                            <p>
+                                Mixing traditional brush textures with cyberpunk aesthetics.
+                                Tools used: Photoshop for textured painting and Blender for block-outs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="expansion-row full-width">
+                        <img src="assets/images/luthando-mapekula-bfa.jpg" alt="Final Reveal Visual"
+                            class="expansion-img">
                     </div>
                 </div>
-            </div>
+            </article>
         </section>
+        NOT READY -->
 
         <!-- Carousel Section (Best Of Grid) -->
         <section class="gallery-section">
@@ -112,38 +154,28 @@
         </section>
     </main>
 
-    <!-- Collapsible Project Details -->
-    <div id="project-details-project1" class="project-details">
-        <div class="modal-content">
-            <img src="assets/images/atelier-project/luthando-mapekula-img-preview.jpg" alt="Full Project"
-                class="modal-image">
-            <div class="modal-text">
-                <h2>Project: Odyssey</h2>
-                <p>A deep dive into futuristic character design. Mixing traditional brush textures with cyberpunk
-                    aesthetics.</p>
-                <p>Tools used: Photoshop, Blender.</p>
-            </div>
-        </div>
-    </div>
 
 
     <footer>
         <div class="footer-icons">
-            <a href="https://www.linkedin.com/in/luthando" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin"></i></a> |
-            <a href="https://github.com/LuthandoMapekula" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fa-brands fa-github"></i></a> |
-            <a href="https://www.artstation.com/lutha-m" target="_blank" rel="noopener noreferrer" aria-label="ArtStation profile"><i class="fa-brands fa-artstation"></i></a>
+            <a href="https://www.linkedin.com/in/luthando-mapekula-006704179/" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin"></i></a> |
+            <a href="https://github.com/LuthandoMapekula" target="_blank" rel="noopener noreferrer"
+                aria-label="GitHub profile"><i class="fa-brands fa-github"></i></a> |
+            <a href="https://www.artstation.com/lutha-m" target="_blank" rel="noopener noreferrer"
+                aria-label="ArtStation profile"><i class="fa-brands fa-artstation"></i></a>
         </div>
         <div class="footer-legal">
             <p>&copy; 2026 Luthando Mapekula. All rights reserved. Data Analyst & Visual Artist</p>
             <div class="footer-links">
                 <a href="legal/legal.html#privacy">Privacy Policy</a> |
                 <a href="legal/legal.html#returns">Return Policy</a> |
-                <a href="legal/legal.html#tos">Terms of Service</a> 
+                <a href="legal/legal.html#tos">Terms of Service</a>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>

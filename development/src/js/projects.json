@@ -1,19 +1,21 @@
-{
+{ 
   "domain-01": {
     "title": "Project Title",
     "status": "Project Status",
     "statusClass": "status-completed/ status-active/ status-upcoming",
     "category": "Domain Name",
     "description": "Elevator pitch description of the project.",
-    "link": "domain-projects/template.html"
-  },
+    "link": "domain-projects/template.html",
+    "tag": ["template", "example"]
+    },
   "it-01": {
     "title": "Library Database System",
     "status": "Completed",
     "statusClass": "status-completed",
     "category": "IT Service Management",
     "description": "A secure database system for managing library resources and user access.",
-    "link": "domain-projects/it.html"
+    "link": "domain-projects/it.html",
+    "tag": ["IT", "Service Management"]
   },
   "iot-01": {
     "title": "Industrial IoT Monitoring System",
@@ -21,7 +23,8 @@
     "statusClass": "status-completed",
     "category": "Industrial IoT",
     "description": "An IoT monitoring system for tracking and managing industrial equipment performance and maintenance schedules.",
-    "link": "domain-projects/it.html"
+    "link": "domain-projects/it.html",
+    "tag": ["Internet of Things", "Monitoring"]
   },
   "web-dev-01": {
     "title": "Online Student Portal",
@@ -30,7 +33,8 @@
     "milestone": "v2.0 Beta",
     "category": "Web Development",
     "description": "Web-based student portal providing access to academic records, announcements, and service requests.",
-    "link": "domain-projects/web-dev.html"
+    "link": "domain-projects/web-dev.html",
+    "tag": ["Web Development", "Student Portal"]
   },
   "data-01": {
     "title": "Data Warehouse & Analytics Platform",
@@ -38,7 +42,8 @@
     "statusClass": "status-completed",
     "category": "Data Infrastructure & Engineering",
     "description": "A comprehensive data warehouse and analytics platform for processing and visualizing large-scale datasets.",
-    "link": "domain-projects/data.html"
+    "link": "domain-projects/data.html",
+    "tag": ["Data Infrastructure", "Analytics"]
   },
   "fintech-01": {
     "title": "Fintech Analytics Dashboard",
@@ -46,7 +51,8 @@
     "statusClass": "status-completed",
     "category": "Fintech & Quantitative Analysis",
     "description": "A comprehensive dashboard for analyzing financial data and generating insights for investment decisions.",
-    "link": "domain-projects/fintech.html"
+    "link": "domain-projects/fintech.html",
+    "tag": ["Fintech", "Analytics"]
   },
   "research-01": {
     "title": "Research & Aerospace",
@@ -54,6 +60,7 @@
     "statusClass": "status-completed",
     "category": "Research & Aerospace",
     "description": "A research and aerospace project focused on advanced engineering and scientific analysis.",
-    "link": "domain-projects/research.html"
+    "link": "domain-projects/research.html",
+    "tag": ["research", "aerospace"]
   }
 }

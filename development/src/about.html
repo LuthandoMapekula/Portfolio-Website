@@ -6,7 +6,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-65FPGWNM4L"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'G-65FPGWNM4L');
@@ -20,62 +20,63 @@
 </head>
 
 <body>
-    <header>
+    <header role="banner">
         <p class="header-text">Luthando Mapekula</p>
 
         <a href="index.html"><img src="assets/logo/p-logo/logoName-white-gif.gif" alt="Logo" class="logo"></a>
-        
+
         <nav>
             <ul>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="atelier.html">Atelier</a></li>
-                <li><a href="about.html" style="color: var(--accent-color)">About</a></li>
+                <li><a href="about.html" class="text-accent">About</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="about-hero fade-in">
             <h1 class="section-title">About Me</h1>
 
-            <div
-                style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); margin-bottom: var(--spacing-xl); position: relative;">
+            <div class="grid-2 mb-md">
                 <div>
                     <h3>Who am I?</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);">
-                        Detail-orientated with a background in Applied Mathematics, Computer Science and Statsistics. 
-                        Adept at applying rigorous mathematical logic to large contextual datasets to identify trends and provide the actonable insights that drive operational efficiency. 
-                        Currently expanding my skills and toolset to feed my unique blend of creative and analytical thinking.
+                    <p class="text-secondary mb-md">
+                        Detail-oriented with a background in Applied Mathematics, Computer Science and Statistics.
+                        Adept at applying rigorous mathematical logic to large contextual datasets to identify trends
+                        and provide the actionable insights that drive operational efficiency.
+                        Currently expanding my skills and toolset to feed my unique blend of creative and analytical
+                        thinking.
                     </p>
-                    <a href="#" class="btn">Download Resume</a>
+                    <a href="./assets/resume/#" class="btn" target="_blank">Download Resume</a>
                 </div>
 
                 <div class="card">
                     <h3>Contact</h3>
                     <!-- <p style="margin-bottom: var(--spacing-sm);">📧 Email: ex@example.com</p> -->
-                     <div class="contact-grid">
-        <a href="https://www.linkedin.com/in/luthando" target="_blank" class="contact-item">
-            <i class="fa-brands fa-linkedin"></i>
-            <span>LinkedIn / Professional Sync</span>
-        </a>
-        
-        <a href="https://github.com/luthando" target="_blank" class="contact-item">
-            <i class="fa-brands fa-github"></i>
-            <span>GitHub / Repository Access</span>
-        </a>
-                    <a href="https://www.artstation.com/lutha-m" target="_blank" class="contact-item">
-            <i class="fa-brands fa-artstation"></i>
-            <span>ArtStation / Visual Assets</span>
-        </a>
+                    <div class="contact-grid">
+                        <a href="https://www.linkedin.com/in/luthando" target="_blank" class="contact-item">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span>LinkedIn / Professional Sync</span>
+                        </a>
+
+                        <a href="https://github.com/luthando" target="_blank" class="contact-item">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub / Repository Access</span>
+                        </a>
+                        <a href="https://www.artstation.com/lutha-m" target="_blank" class="contact-item">
+                            <i class="fa-brands fa-artstation"></i>
+                            <span>ArtStation / Visual Assets</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
         </section>
 
         <h2 class="section-title">Experience & Skills</h2>
         <div class="grid-container">
             <div class="card">
                 <h4>Skillset & Tools</h4>
-                <ul style="list-style-position: inside; color: var(--text-secondary);">
+                <ul class="list-inside text-secondary">
                     <li>Excel(VBA)</li>
                     <li>Python</li>
                     <li>SQL</li>
@@ -85,14 +86,12 @@
                     <li>WordPress, Wix</li>
                     <li>Figma, Framer</li>
                     <li>Photoshop, Sketchbook</li>
-
-
                 </ul>
             </div>
             <div class="card">
                 <h4>Domains</h4>
-                <ul style="list-style-position: inside; color: var(--text-secondary);">
-                    
+                <ul class="list-inside text-secondary">
+
                     <li>IT Service Management</li>
                     <!-- <li>Enterprise Development</li> -->
                     <!-- <li>IT Service Management & Industrial IoT</li> -->
@@ -107,12 +106,14 @@
             </div>
         </div>
         <!-- Online badges carousel-->
-        <div class="carousel-loop" style="margin-top: var(--spacing-lg);">
+        <div class="carousel-loop mt-lg">
             <div class="carousel-loop-item">
-                <img src="assets/icons/Achievements/achieve-icon-Ignite-Fabric.png" alt="Ignite Edition with Microsoft Fabric">
+                <img src="assets/icons/Achievements/achieve-icon-Ignite-Fabric.png"
+                    alt="Ignite Edition with Microsoft Fabric">
             </div>
             <div class="carousel-loop-item">
-                <img src="assets/badges/freecodecamp-javascript-algorithms.png" alt="FreeCodeCamp JavaScript Algorithms">
+                <img src="assets/badges/freecodecamp-javascript-algorithms.png"
+                    alt="FreeCodeCamp JavaScript Algorithms">
             </div>
             <div class="carousel-loop-item">
                 <img src="assets/badges/cisco-it-fundamentals.png" alt="Cisco IT Fundamentals">
@@ -126,10 +127,12 @@
 
 
             <div class="carousel-loop-item">
-                <img src="assets/icons/Achievements/achieve-icon-Ignite-Fabric.png" alt="Ignite Edition with Microsoft Fabric">
+                <img src="assets/icons/Achievements/achieve-icon-Ignite-Fabric.png"
+                    alt="Ignite Edition with Microsoft Fabric">
             </div>
             <div class="carousel-loop-item">
-                <img src="assets/badges/freecodecamp-javascript-algorithms.png" alt="FreeCodeCamp JavaScript Algorithms">
+                <img src="assets/badges/freecodecamp-javascript-algorithms.png"
+                    alt="FreeCodeCamp JavaScript Algorithms">
             </div>
             <div class="carousel-loop-item">
                 <img src="assets/badges/cisco-it-fundamentals.png" alt="Cisco IT Fundamentals">
@@ -141,9 +144,9 @@
                 <img src="assets/badges/google-it-support.png" alt="Google IT Support">
             </div>
         </div>
-        
+
         <!-- Experience section -->
-        <div class="card" style="margin-top: var(--spacing-lg);">
+        <div class="card mt-lg">
             <h3>Experience</h3>
 
             <div class="experience-item">
@@ -153,10 +156,14 @@
                 </div>
                 <div class="exp-sub">Nkqubela Technologies • East London</div>
                 <ul class="exp-list">
-                    <li>Strategic Alignment: Aligned project metrics with strategic business needs through meticulous objective tracking.</li>
-                    <li>Data Management: Analysed and maintained datasets exceeding 100,000 total records, ensuring data integrity and availability.</li>
-                    <li>Reporting: Delivered multi-frequency reporting including daily operational, weekly performance, and monthly executive reports.</li>
-                    <li>Optimization: Designed and deployed 8+ dashboards (Power BI & Python) to improve real-time visibility.</li>
+                    <li>Strategic Alignment: Aligned project metrics with strategic business needs through meticulous
+                        objective tracking.</li>
+                    <li>Data Management: Analysed and maintained datasets exceeding 100,000 total records, ensuring data
+                        integrity and availability.</li>
+                    <li>Reporting: Delivered multi-frequency reporting including daily operational, weekly performance,
+                        and monthly executive reports.</li>
+                    <li>Optimization: Designed and deployed 8+ dashboards (Power BI & Python) to improve real-time
+                        visibility.</li>
                 </ul>
             </div>
 
@@ -167,32 +174,36 @@
                 </div>
                 <div class="exp-sub">Walter Sisulu University (CLTD) • Mthatha</div>
                 <ul class="exp-list">
-                    <li>Supported: Digital literacy and platform access for 1000+ students during the academic year.</li>
+                    <li>Supported: Digital literacy and platform access for 1000+ students during the academic year.
+                    </li>
                     <li>Maintained: Technical inventory and 90% system uptime during peak academic periods.</li>
                 </ul>
             </div>
 
         </div>
-    
+
     </main>
 
     <footer>
         <div class="footer-icons">
-            <a href="https://www.linkedin.com/in/luthando" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin"></i></a> |
-            <a href="https://github.com/LuthandoMapekula" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fa-brands fa-github"></i></a> |
-            <a href="https://www.artstation.com/lutha-m" target="_blank" rel="noopener noreferrer" aria-label="ArtStation profile"><i class="fa-brands fa-artstation"></i></a>
+            <a href="https://www.linkedin.com/in/luthando-mapekula-006704179/" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin"></i></a> |
+            <a href="https://github.com/LuthandoMapekula" target="_blank" rel="noopener noreferrer"
+                aria-label="GitHub profile"><i class="fa-brands fa-github"></i></a> |
+            <a href="https://www.artstation.com/lutha-m" target="_blank" rel="noopener noreferrer"
+                aria-label="ArtStation profile"><i class="fa-brands fa-artstation"></i></a>
         </div>
         <div class="footer-legal">
             <p>&copy; 2026 Luthando Mapekula. All rights reserved. Data Analyst & Visual Artist</p>
             <div class="footer-links">
                 <a href="legal/legal.html#privacy">Privacy Policy</a> |
                 <a href="legal/legal.html#returns">Return Policy</a> |
-                <a href="legal/legal.html#tos">Terms of Service</a> 
+                <a href="legal/legal.html#tos">Terms of Service</a>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>

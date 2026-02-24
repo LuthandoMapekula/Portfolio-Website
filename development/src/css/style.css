@@ -1,5 +1,5 @@
 @import url(https://db.onlinewebfonts.com/c/29ddb4605533a38e086b48fa105e0d12?family=Nohemi);
- 
+
 :root {
     /* Color Palette - Premium Theme */
     --bg-primary: #0c1519;
@@ -12,7 +12,7 @@
     /* Antique Brass */
     --accent-hover: #b88665;
     --border-color: #2a2a2a;
- 
+
     /* Spacing */
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
@@ -23,12 +23,51 @@
     --font-main: 'Nohemi', sans-serif;
 }
 
+/* Utility Classes */
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.text-accent {
+    color: var(--accent-color);
+}
+
+.font-lg {
+    font-size: 3rem;
+}
+
+.max-w-600 {
+    max-width: 600px;
+}
+
+.my-lg {
+    margin: var(--spacing-lg) 0;
+}
+
+.mb-md {
+    margin-bottom: var(--spacing-md);
+}
+
+.mt-lg {
+    margin-top: var(--spacing-lg);
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+}
+
+.list-inside {
+    list-style-position: inside;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
- 
+
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
@@ -231,12 +270,19 @@ footer {
 }
 
 @keyframes appear {
-    to {opacity: 1; }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes scroll {
-    0% { transform: translateX(0);}
-    100% { transform: translateX(calc(-150px * 5)); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-150px * 5));
+    }
 }
 
 .fade-in {
@@ -424,6 +470,7 @@ footer {
     border-radius: 20px;
     font-size: 0.9rem;
 }
+
 /* Carousel Loop */
 .carousel-loop {
     display: flex;
@@ -431,11 +478,13 @@ footer {
     -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
+
 .carousel-loop-item {
     flex: 0 0 150px;
     margin: 0 25px;
     animation: scroll 60s linear infinite;
 }
+
 /* Not necessary with slow carousel time
 .carousel-loop:hover .carousel-item {
     animation-play-state: paused;
@@ -524,6 +573,14 @@ footer {
     margin-bottom: 12px;
 }
 
+.experience-item {
+    margin-bottom: var(--spacing-lg);
+}
+
+.experience-item:last-child {
+    margin-bottom: 0;
+}
+
 /* New: Styles for the list of achievements */
 .exp-list {
     color: var(--text-secondary);
@@ -538,7 +595,8 @@ footer {
 }
 
 .exp-list strong {
-    color: var(--text-primary); /* Makes the 'Impact keywords' stand out */
+    color: var(--text-primary);
+    /* Makes the 'Impact keywords' stand out */
 }
 
 
@@ -625,6 +683,120 @@ footer {
     cursor: pointer;
     z-index: 210;
 }
+
+.project-thumbnail {
+    all: unset;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.project-thumbnail:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, .7), transparent);
+    color: white;
+}
+
+.project-details {
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    animation: fadeIn 0.4s ease;
+}
+
+/* Expansion Grid System */
+.project-expansion-grid {
+    margin-top: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    animation: fadeIn 0.5s ease-out;
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.project-expansion-grid[hidden] {
+    display: none;
+}
+
+.expansion-row {
+    width: 100%;
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.expansion-row.full-width {
+    flex-direction: column;
+}
+
+.expansion-row.split-content {
+    align-items: center;
+}
+
+.expansion-row.split-content.reverse {
+    flex-direction: row-reverse;
+}
+
+.expansion-text-block {
+    flex: 1;
+    padding: var(--spacing-lg);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.expansion-text-block h3 {
+    color: var(--accent-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.expansion-asset-block {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 8px;
+    aspect-ratio: 1 / 1;
+}
+
+.expansion-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.expansion-asset-block:hover .expansion-img {
+    transform: scale(1.05);
+}
+
+.full-width .expansion-img {
+    aspect-ratio: 21 / 9;
+}
+
+@media (max-width: 768px) {
+
+    .expansion-row.split-content,
+    .expansion-row.split-content.reverse {
+        flex-direction: column;
+    }
+
+    .expansion-asset-block {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+
 
 /* --- Projects Restructure --- */
 
@@ -768,19 +940,21 @@ footer {
 .about-hero {
     position: relative;
     /* Ensure the container has height. You can use min-height or padding */
-    min-height: 400px; 
+    min-height: 400px;
     width: 100%;
-    z-index: 1; /* Creates a stacking context */
+    z-index: 1;
+    /* Creates a stacking context */
 }
 
 .about-hero::before {
-    content: ""; /* This must be here */
+    content: "";
+    /* This must be here */
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    
+
     /* 1. CHECK YOUR PATH: If your CSS is in a folder like /css/style.css, 
        you might need ../assets/background.gif */
     background-image: url('../assets/images/About-gif/star-4773.gif');
@@ -792,93 +966,105 @@ footer {
     -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
     mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
 
-    opacity: 0.5; /* Set to 1 temporarily to see if it appears at all */
-    z-index: -1;   /* Places it behind your text */
+    opacity: 0.5;
+    /* Set to 1 temporarily to see if it appears at all */
+    z-index: -1;
+    /* Places it behind your text */
 }
 
 .contact-card h3 {
-        margin-bottom: var(--spacing-lg);
-        color: var(--text-primary);
-        letter-spacing: 1px;
-    }
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+    letter-spacing: 1px;
+}
 
-    .contact-grid {
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-md);
-    }
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
 
-    .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        text-decoration: none;
-        color: var(--text-secondary);
-        transition: all 0.3s ease;
-        padding: 10px;
-        border-radius: 4px;
-        border: 1px solid transparent;
-    }
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm);
+    border-radius: 8px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--text-secondary);
+}
 
-    .contact-item i {
-        font-size: 1.2rem;
-        width: 25px;
-        text-align: center;
-        color: var(--text-primary);
-    }
+.contact-item:hover {
+    border-color: var(--accent-color);
+    transform: translateX(5px);
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
 
-    .contact-item:hover {
-        color: var(--text-primary);
-        background: rgba(255, 255, 255, 0.05);
-        border-color: rgba(255, 255, 255, 0.1);
-        transform: translateX(5px);
-    }
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    width: 25px;
+    text-align: center;
+}
 
-    .contact-item span {
-        font-size: 0.95rem;
-        font-weight: 300;
-    }
+.contact-item span {
+    font-size: 0.95rem;
+    font-weight: 300;
+}
 
 /* Specific styling for the policy content to ensure readability */
-    .legal-container {
-            max-width: 800px;
-            margin: var(--spacing-xl) 0;
-            line-height: 1.8;
-        }
-        .legal-section {
-            margin-bottom: 80px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 40px;
-            scroll-margin-top: 100px; /* Ensures the header doesn't cover the title when jumping to anchors */
-        }
-        .legal-section h2 {
-            margin-bottom: var(--spacing-md);
-            color: var(--text-primary);
-            font-size: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .policy-subheading {
-            margin-top: var(--spacing-lg);
-            color: var(--text-primary);
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-        .legal-container p, .legal-container li {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-        }
-        .legal-container ul {
-            padding-left: 20px;
-            margin-bottom: var(--spacing-md);
-        }
-        .architect-note {
-            border-left: 3px solid var(--text-primary);
-            padding-left: 20px;
-            margin-bottom: 30px;
-            font-style: italic;
-            color: var(--text-primary);
-        }
-        html {
-            scroll-behavior: smooth;
-        }
+.legal-container {
+    max-width: 800px;
+    margin: var(--spacing-xl) 0;
+    line-height: 1.8;
+}
+
+.legal-section {
+    margin-bottom: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 40px;
+    scroll-margin-top: 100px;
+    /* Ensures the header doesn't cover the title when jumping to anchors */
+}
+
+.legal-section h2 {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.policy-subheading {
+    margin-top: var(--spacing-lg);
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.legal-container p,
+.legal-container li {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.legal-container ul {
+    padding-left: 20px;
+    margin-bottom: var(--spacing-md);
+}
+
+.architect-note {
+    border-left: 3px solid var(--text-primary);
+    padding-left: 20px;
+    margin-bottom: 30px;
+    font-style: italic;
+    color: var(--text-primary);
+}
+
+html {
+    scroll-behavior: smooth;
+}

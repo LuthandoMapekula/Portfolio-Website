@@ -1,71 +1,114 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Portfolio website loaded');
-
-    // Load dynamic projects first
     loadRecentWork();
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
- 
-    // Add more interactive logic here as needed
+    initSmoothScroll();
     setTimeout(initWordCycle, 1500);
 });
 
-/* Dynamic Project Loader */
+// Smooth scrolling
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', e => {
+            e.preventDefault();
+            const target = document.querySelector(anchor.getAttribute('href'));
+            if(target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+}
+
+// Escape HTML
+function escapeHTML(str) {
+    const p = document.createElement('p');
+    p.textContent = str;
+    return p.innerHTML;
+}
+
+// Render project card
+function renderProjectCard(project) {
+    return `
+        <img src="${project.thumbnail}" alt="${escapeHTML(project.title)} Thumbnail" class="project-thumb">
+        <span class="project-status ${project.statusClass}">${escapeHTML(project.status)}</span>
+        ${project.milestone ? `<div class="project-milestone">${escapeHTML(project.milestone)}</div>` : ''}
+        <h3>${escapeHTML(project.title)}</h3>
+        <div class="project-category">${escapeHTML(project.category)}</div>
+        <p>${escapeHTML(project.description)}</p>
+        <a href="${project.link}" class="btn">View Details</a>
+    `;
+}
+
+// Load projects dynamically
 async function loadRecentWork() {
     const container = document.getElementById('recent-work-container');
-    if (!container) return; // Exit if the section isn't on the current page
+    if (!container) return;
 
     try {
-        let response = await fetch('../js/projects.json');
+        // Try multiple relative paths based on common structures
+        const paths = ['js/projects.json', '../js/projects.json', '../../js/projects.json'];
+        let response = null;
         
-        if (!response.ok) {
-            response = await fetch('js/projects.json');
-        }
-        const projectData = await response.json();
-
-        // Look for cards with a specific project ID
-        document.querySelectorAll('.card[data-project-id]').forEach(card => {
-            const id = card.getAttribute('data-project-id');
-            const project = projectData[id];
-
-            if (project) {
-                // Injects the HTML structure automatically
-                card.innerHTML = `
-                    <span class="project-status ${project.statusClass}">${project.status}</span>
-                    ${project.milestone ? `<div style="font-size: 0.75rem; color: #ffc107; margin-bottom: 5px;">${project.milestone}</div>` : ''}
-                    <h3>${project.title}</h3>
-                    <div style="margin: var(--spacing-sm) 0;">
-                        <span style="font-size: 0.8rem; border: 1px solid var(--text-secondary); padding: 2px 8px; border-radius: 12px;">${project.category}</span>
-                    </div>
-                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md)">${project.description}</p>
-                    <div style="display: flex; gap: var(--spacing-sm);">
-                        <a href="${project.link}" class="btn">View Details</a>
-                    </div>
-                `;
+        for (const path of paths) {
+            try {
+                const res = await fetch(path);
+                if (res.ok) {
+                    response = res;
+                    break;
+                }
+            } catch (e) {
+                // Ignore fetch errors for individual paths
             }
+        }
+
+        if (!response) {
+            throw new Error('Projects JSON not found in expected paths.');
+        }
+
+        const projects = await response.json();
+
+        const cards = container.querySelectorAll('.card[data-project-id]');
+        if (cards.length === 0) {
+            console.warn('No project placeholders found in recent-work-container.');
+            return;
+        }
+
+        cards.forEach((card, index) => {
+            const projectId = card.dataset.projectId;
+            const project = projects[projectId];
+
+            if (!project) {
+                console.warn(`Missing project in JSON: ${projectId}`);
+                card.innerHTML = `<p style="color:#ff6b6b;">Project not found: ${projectId}</p>`;
+                return;
+            }
+
+            card.classList.add('fade-in');
+            card.style.animationDelay = `${index * 0.1}s`;
+            card.innerHTML = renderProjectCard(project);
         });
-    } catch (error) {
-        console.error('Error loading projects:', error);
+
+    } catch (err) {
+        console.error('Error loading projects:', err);
     }
 }
 
-/* Word Cycling Animation */
+
+/* Word Cycling Animation (Positive vs Negative, Synced) */
 function initWordCycle() {
     const cycleElements = document.querySelectorAll('.cycle-word');
-    const fillerWords = ["design", "chaos", "artistry", "glitch", "structure", "noise", "vision", "code"];
+
+    const fillerSets = {
+        positive: ["design", "artistry", "structure", "vision", "patience", "practice", "attention to detail", "intent", "discipline", "precision"],
+        negative: ["noise", "chaos", "glitch", "accidental", "random", "imitation", "lack of consistency", "confusion", "distraction", "error"]
+    };
+
+    const maxCycles = 14;
+    const intervalMs = 500;
 
     cycleElements.forEach(el => {
-        const finalWord = el.getAttribute('data-final');
+        const finalWord = el.dataset.final;
+        const setKey = el.dataset.set; // "positive" | "negative"
+        const fillerWords = fillerSets[setKey] || fillerSets.positive;
+
         let cycles = 0;
-        const maxCycles = 15; // Number of flips before settling
 
         const interval = setInterval(() => {
             el.textContent = fillerWords[Math.floor(Math.random() * fillerWords.length)];
@@ -74,17 +117,22 @@ function initWordCycle() {
             if (cycles >= maxCycles) {
                 clearInterval(interval);
                 el.textContent = finalWord;
+                el.classList.add('cycle-done');
             }
-        }, 500);
+        }, intervalMs);
     });
 }
 
-/* Gallery Modal Logic */
 // Toggle collapsible project details
-function toggleProjectDetails(projectId) {
-    const details = document.getElementById('project-details-' + projectId);
-    if (details) {
-        details.classList.toggle('open');
-    }
-}
+document.addEventListener("click", (e) => {
+    const toggle = e.target.closest("[data-toggle]");
+    if (!toggle) return;
 
+    const id = toggle.dataset.toggle;
+    const details = document.getElementById(`project-details-${id}`);
+
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!expanded));
+
+    details.hidden = expanded;
+});

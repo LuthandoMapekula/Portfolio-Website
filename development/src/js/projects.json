@@ -13,8 +13,8 @@
     "status": "Completed",
     "statusClass": "status-completed",
     "category": "IT Service Management",
-    "description": "A secure database system for managing library resources and user access.",
-    "link": "domain-projects/it.html",
+    "description": "A relational database solution designed to manage book inventory, member registration and loan tracking for a small library.",
+    "link": "https://github.com/LuthandoMapekula/Library-Database-System-v1.0/tree/master",
     "tag": ["IT", "Service Management"]
   },
   "iot-01": {

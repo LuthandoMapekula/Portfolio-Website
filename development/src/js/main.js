@@ -26,7 +26,6 @@ function escapeHTML(str) {
 // Render project card
 function renderProjectCard(project) {
     return `
-        <img src="${project.thumbnail}" alt="${escapeHTML(project.title)} Thumbnail" class="project-thumb">
         <span class="project-status ${project.statusClass}">${escapeHTML(project.status)}</span>
         ${project.milestone ? `<div class="project-milestone">${escapeHTML(project.milestone)}</div>` : ''}
         <h3>${escapeHTML(project.title)}</h3>

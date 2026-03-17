@@ -671,7 +671,7 @@ footer {
 .modal-text {
     padding: var(--spacing-lg);
 }
-
+ 
 .close-modal {
     color: white;
     float: right;

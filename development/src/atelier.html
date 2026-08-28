@@ -17,6 +17,11 @@
     <meta name="description" content="My Art Portfolio">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<script src="js/favicon-loader.js"></script>
 </head>
 
 <body>
@@ -57,100 +62,134 @@
         </section>
         <!-- Hero Section Changed to Accordion Stacked Cards-->
 
-        <!-- Main Project Section (Expandable) -->
+        <!-- Featured Project Section -->
         <section class="gallery-section">
             <h2 class="section-title">Featured Project</h2>
 
-            <article class="project-showcase" data-project-id="project1">
-                <header class="project-header">
-                    <a href="https://www.artstation.com/artwork/OyROA8" target="_blank" rel="noopener noreferrer"
-                        class="project-artstation-link" aria-label="View Project: Odyssey on ArtStation">
-                        Project: Odyssey on ArtStation
+            <div class="accordion-card" id="featuredAccordion">
+                <div class="accordion-bar accordion-bar-top">
+                    <span id="accordionTopLabel">Project: Odyssey</span>
+                    <a id="accordionArtstationLink" href="page-atelier/atelier-home.html" 
+                        rel="noopener noreferrer" class="project-artstation-link"
+                        aria-label="View Project: Odyssey on ArtStation">
+                        Visit Atelier
                     </a>
-                </header>
-
-                <button class="project-thumbnail" type="button" data-toggle="project1" aria-expanded="false"
-                    aria-controls="project-details-project1">
-                    <img src="assets/images/atelier-project/luthando-mapekula-img-preview.jpg"
-                        alt="Preview of Project Odyssey character concept art" loading="lazy" />
-
-                    <div class="project-info">
-                        <h3>Project: Odyssey</h3>
-                        <p>Character Concept Art</p>
-                        <span class="view-btn">Preview</span>
-                    </div>
-                </button>
-
-                <!-- Expandable Content 
-                <div id="project-details-project1" class="project-expansion-grid" hidden>
-                    <div class="expansion-row full-width">
-                        <img src="assets/images/atelier-project/luthando-mapekula-img-preview.jpg"
-                            alt="Full Width Visual" class="expansion-img">
-                    </div>
-
-                    <div class="expansion-row split-content">
-                        <div class="expansion-text-block">
-                            <h3>Design Philosophy</h3>
-                            <p>
-                                A character exploration project focused on silhouette design, material language,
-                                and sci-fi narrative worldbuilding.
-                            </p>
-                        </div>
-                        <div class="expansion-asset-block">
-                            <img src="assets/images/luthando-mapekula-character design.jpg" alt="Process Asset 1"
-                                class="expansion-img">
-                        </div>
-                    </div>
-
-                    <div class="expansion-row split-content reverse">
-                        <div class="expansion-asset-block">
-                            <img src="assets/images/luthando-mapekula-illustration.jpg" alt="Process Asset 2"
-                                class="expansion-img">
-                        </div>
-                        <div class="expansion-text-block">
-                            <h3>Technical Implementation</h3>
-                            <p>
-                                Mixing traditional brush textures with cyberpunk aesthetics.
-                                Tools used: Photoshop for textured painting and Blender for block-outs.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="expansion-row full-width">
-                        <img src="assets/images/luthando-mapekula-bfa.jpg" alt="Final Reveal Visual"
-                            class="expansion-img">
-                    </div>
                 </div>
-            </article>
+
+                <div class="accordion-track">
+                    <!-- Volume 1: Odyssey -->
+                    <div class="accordion-pane active" data-project-id="project1" role="button" tabindex="0"
+                        aria-expanded="true" data-title="Project: Odyssey"
+                        data-artstation="https://www.artstation.com/artwork/OyROA8" data-plates="4 plates, director's cut available"
+                        style="background-image: url('assets/images/atelier-project/luthando-mapekula-img-preview.jpg');">
+                        <span class="accordion-pane-label">Odyssey</span>
+                        <div class="accordion-pane-content">
+                            <span class="feature-final-eyebrow">Character Concept Art</span>
+                            <h3>Project: Odyssey</h3>
+                            <p>A character exploration project focused on silhouette design, material language, and
+                                sci-fi narrative worldbuilding.</p>
+                            <a href="page-atelier/atelier-odyssey.html" class="btn">Open Director's Cut</a>
+                        </div>
+                    </div>
+
+                    <!-- Volume 2: Artbook Volume 1 (placeholder) -->
+                    <div class="accordion-pane" data-project-id="artbook-vol-1" role="button" tabindex="0"
+                        aria-expanded="false" data-title="Artbook Volume 1 (Placeholder)"
+                        data-artstation="https://www.artstation.com/lutha-m" data-plates="2 plates, placeholder"
+                        style="background-image: url('assets/images/luthando-mapekula-wallpaper.jpg');">
+                        <span class="accordion-pane-label">Volume 1</span>
+                        <div class="accordion-pane-content">
+                            <span class="feature-final-eyebrow">Placeholder</span>
+                            <h3>Artbook Volume 1</h3>
+                            <p>Placeholder volume to test the accordion — real project, images, and copy to
+                                follow.</p>
+                            <a href="page-atelier/atelier-feature-volume-1.html" class="btn">Open Director's Cut</a>
+                        </div>
+                    </div>
+
+                    <!-- Volume 3: Artbook Volume 2 (placeholder) -->
+                    <div class="accordion-pane" data-project-id="artbook-vol-2" role="button" tabindex="0"
+                        aria-expanded="false" data-title="Artbook Volume 2 (Placeholder)"
+                        data-artstation="https://www.artstation.com/lutha-m" data-plates="2 plates, placeholder"
+                        style="background-image: url('assets/images/luthando-mapekula-illustration.jpg');">
+                        <span class="accordion-pane-label">Volume 2</span>
+                        <div class="accordion-pane-content">
+                            <span class="feature-final-eyebrow">Placeholder</span>
+                            <h3>Artbook Volume 2</h3>
+                            <p>Placeholder volume to test the accordion — real project, images, and copy to
+                                follow.</p>
+                            <a href="page-atelier/atelier-feature-volume-2.html" class="btn">Open Director's Cut</a>
+                        </div>
+                    </div>
+
+                    <!-- Add a new .accordion-pane here for each new volume, with its own data-title /
+                         data-artstation / data-plates and a link to that volume's director's-cut page -->
+                </div>
+
+                <div class="accordion-bar accordion-bar-bottom">
+                    <span id="accordionBottomLabel">4 plates, director's cut available</span>
+                </div>
+            </div>
         </section>
-        NOT READY -->
 
         <!-- Carousel Section (Best Of Grid) -->
         <section class="gallery-section">
             <h2 class="section-title">Best Of Collection</h2>
-            <div class="carousel-grid">
-                <!-- Grid Item 1 -->
-                <a href="https://www.artstation.com/artwork/J42O0" target="_blank" class="carousel-item">
-                    <img src="assets/images/luthando-mapekula-bfa.jpg" alt="Branding - Luthando Mapekula BFA">
-                    <div class="carousel-overlay">
-                        <span>Branding</span>
+            <div class="collection-grid">
+                <!-- Grid Item 1: Branding -->
+                <div class="collection-card">
+                    <div class="collection-card-bg" style="background-image: url('assets/images/luthando-mapekula-bfa.jpg');"></div>
+                    <div class="collection-card-header">
+                        <h3>Branding</h3>
+                        <p>Hover to view pieces</p>
                     </div>
-                </a>
-                <!-- Grid Item 2 -->
-                <a href="https://www.artstation.com/artwork/Loq1w" target="_blank" class="carousel-item">
-                    <img src="assets/images/luthando-mapekula-character design.jpg"
-                        alt="Character Design - Luthando Mapekula">
-                    <div class="carousel-overlay">
-                        <span>Character Design</span>
+                    <div class="mini-cards-stack">
+                        <a href="https://www.artstation.com/artwork/J42O0" target="_blank" rel="noopener noreferrer" class="mini-card">
+                            <h4>BFA Identity System</h4>
+                            <p class="mini-description">Brand identity and print collateral.</p>
+                        </a>
+                        <a href="https://www.artstation.com/lutha-m" target="_blank" rel="noopener noreferrer" class="mini-card">
+                            <h4>More Branding Work</h4>
+                            <p class="mini-description">View additional branding pieces on ArtStation.</p>
+                        </a>
                     </div>
-                </a>
-                <!-- Grid Item 3 -->
-                <a href="https://www.artstation.com/artwork/RY3YkW" target="_blank" class="carousel-item">
-                    <img src="assets/images/luthando-mapekula-illustration.jpg" alt="Illustration - Luthando Mapekula">
-                    <div class="carousel-overlay">
-                        <span>Illustration</span>
+                </div>
+                <!-- Grid Item 2: Character Design -->
+                <div class="collection-card">
+                    <div class="collection-card-bg" style="background-image: url('assets/images/luthando-mapekula-character design.jpg');"></div>
+                    <div class="collection-card-header">
+                        <h3>Character Design</h3>
+                        <p>Hover to view pieces</p>
                     </div>
-                </a>
+                    <div class="mini-cards-stack">
+                        <a href="https://www.artstation.com/artwork/Loq1w" target="_blank" rel="noopener noreferrer" class="mini-card">
+                            <h4>Character Concept Art</h4>
+                            <p class="mini-description">Silhouette and material studies.</p>
+                        </a>
+                        <a href="https://www.artstation.com/lutha-m" target="_blank" rel="noopener noreferrer" class="mini-card">
+                            <h4>More Character Work</h4>
+                            <p class="mini-description">View additional character pieces on ArtStation.</p>
+                        </a>
+                    </div>
+                </div>
+                <!-- Grid Item 3: Illustration -->
+                <div class="collection-card">
+                    <div class="collection-card-bg" style="background-image: url('assets/images/luthando-mapekula-illustration.jpg');"></div>
+                    <div class="collection-card-header">
+                        <h3>Illustration</h3>
+                        <p>Hover to view pieces</p>
+                    </div>
+                    <div class="mini-cards-stack">
+                        <a href="https://www.artstation.com/artwork/RY3YkW" target="_blank" rel="noopener noreferrer" class="mini-card">
+                            <h4>Illustration Series</h4>
+                            <p class="mini-description">Narrative and worldbuilding pieces.</p>
+                        </a>
+                        <a href="https://www.artstation.com/lutha-m" target="_blank" rel="noopener noreferrer" class="mini-card">
+                            <h4>More Illustration Work</h4>
+                            <p class="mini-description">View additional illustration pieces on ArtStation.</p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -169,9 +208,9 @@
         <div class="footer-legal">
             <p>&copy; 2026 Luthando Mapekula. All rights reserved. Data & Systems Analyst | Visual Artist</p>
             <div class="footer-links">
-                <a href="legal/legal.html#privacy">Privacy Policy</a> |
-                <a href="legal/legal.html#returns">Return Policy</a> |
-                <a href="legal/legal.html#tos">Terms of Service</a>
+                <a href="page-legal/legal.html#privacy">Privacy Policy</a> |
+                <a href="page-legal/legal.html#returns">Return Policy</a> |
+                <a href="page-legal/legal.html#tos">Terms of Service</a>
             </div>
         </div>
     </footer>

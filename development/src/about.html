@@ -17,6 +17,11 @@
     <meta name="description" content="About Me and Resume">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<script src="js/favicon-loader.js"></script>
 </head>
 
 <body>
@@ -35,41 +40,42 @@
     </header>
 
     <main id="main-content">
+            <div class="contact-section" role="group" aria-label="Contact">
+                <!-- <p style="margin-bottom: var(--spacing-sm);">📧 Email: ex@example.com</p> -->
+                <div class="contact-grid">
+                    <a href="https://www.linkedin.com/in/luthando-mapekula-006704179/" target="_blank" class="contact-item">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>LinkedIn / Professional Sync</span>
+                    </a>
+
+                    <a href="https://github.com/LuthandoMapekula" target="_blank" class="contact-item">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub / Repository Access</span>
+                    </a>
+                    <a href="https://www.artstation.com/lutha-m" target="_blank" class="contact-item">
+                        <i class="fa-brands fa-artstation"></i>
+                        <span>ArtStation / Visual Assets</span>
+                    </a>
+                </div>
+            </div>
+
         <section class="about-hero fade-in">
             <h1 class="section-title">About Me</h1>
 
-            <div class="grid-2 mb-md">
-                <div>
-                    <h3>Who am I?</h3>
-                    <p class="text-secondary mb-md">
-                        Detail-orientated with a foundation in Applied Mathematics, Computer Science and Statistics. 
-                        Adept at turning large, messy, contextual datasets into infrastructure (pipelines, validation layers, and reporting systems)
-                        that holds up under scrutiny.<br><b> Insight decks you read once, because I measured twice.</b><br> 
-                        Currently working from provincial systems to architecting solutions behind Africa's next growth chapter - 
-                        same rigor, bigger blueprint.
-                    </p>
-                    <a href="./assets/resume/#" class="btn" target="_blank">Download Resume</a>
+            <div class="mb-md">
+                <h3>Who am I?</h3>
+                <p class="text-secondary mb-md">
+                    Detail-orientated with a foundation in Applied Mathematics, Computer Science and Statistics.
+                    Adept at turning large, messy, contextual datasets into infrastructure (pipelines, validation layers, and reporting systems)
+                    that holds up under scrutiny.<br><b> Insight decks you read once, because I measured twice.</b><br>
+                    Currently working from provincial systems to architecting solutions behind Africa's next growth chapter -
+                    same rigor, bigger blueprint.
+                </p>
+                <div class="btn-group">
+                    <!--<a href="./assets/resume/resume.pdf" class="btn" download>Download Resume</a> -->
+                    <a href="./assets/resume/full resume.pdf" class="btn" download>Download Full Resume</a>
                 </div>
-
-                <div class="card">
-                    <h3>Contact</h3>
-                    <!-- <p style="margin-bottom: var(--spacing-sm);">📧 Email: ex@example.com</p> -->
-                    <div class="contact-grid">
-                        <a href="https://www.linkedin.com/in/luthando-mapekula-006704179/" target="_blank" class="contact-item">
-                            <i class="fa-brands fa-linkedin"></i>
-                            <span>LinkedIn / Professional Sync</span>
-                        </a>
-
-                        <a href="https://github.com/LuthandoMapekula" target="_blank" class="contact-item">
-                            <i class="fa-brands fa-github"></i>
-                            <span>GitHub / Repository Access</span>
-                        </a>
-                        <a href="https://www.artstation.com/lutha-m" target="_blank" class="contact-item">
-                            <i class="fa-brands fa-artstation"></i>
-                            <span>ArtStation / Visual Assets</span>
-                        </a>
-                    </div>
-                </div>
+            </div>
         </section>
 
         <h2 class="section-title">Experience & Skills</h2>
@@ -105,7 +111,7 @@
                 </ul>
             </div>
         </div>
-        <!-- Online badges carousel-->
+        <!-- Online badges carousel
         <div class="carousel-loop mt-lg">
             <div class="carousel-loop-item">
                 <img src="assets/icons/Achievements/achieve-icon-Ignite-Fabric.png"
@@ -143,7 +149,7 @@
             <div class="carousel-loop-item">
                 <img src="assets/badges/google-it-support.png" alt="Google IT Support">
             </div>
-        </div>
+        </div> -->
 
         <!-- Experience section -->
         <div class="card mt-lg">
@@ -196,9 +202,9 @@
         <div class="footer-legal">
             <p>&copy; 2026 Luthando Mapekula. All rights reserved. Data & Systems Analyst | Visual Artist</p>
             <div class="footer-links">
-                <a href="legal/legal.html#privacy">Privacy Policy</a> |
-                <a href="legal/legal.html#returns">Return Policy</a> |
-                <a href="legal/legal.html#tos">Terms of Service</a>
+                <a href="page-legal/legal.html#privacy">Privacy Policy</a> |
+                <a href="page-legal/legal.html#returns">Return Policy</a> |
+                <a href="page-legal/legal.html#tos">Terms of Service</a>
             </div>
         </div>
     </footer>

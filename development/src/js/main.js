@@ -2,8 +2,48 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Portfolio website loaded');
     loadRecentWork();
     initSmoothScroll();
+    initFeaturedAccordion();
     setTimeout(initWordCycle, 1500);
 });
+
+// Featured Project horizontal accordion (click-to-expand volumes)
+function initFeaturedAccordion() {
+    const accordion = document.getElementById('featuredAccordion');
+    if (!accordion) return;
+
+    const topLabel = document.getElementById('accordionTopLabel');
+    const bottomLabel = document.getElementById('accordionBottomLabel');
+    const artstationLink = document.getElementById('accordionArtstationLink');
+    const panes = accordion.querySelectorAll('.accordion-pane');
+
+    function activate(pane) {
+        panes.forEach(p => {
+            const isActive = p === pane;
+            p.classList.toggle('active', isActive);
+            p.setAttribute('aria-expanded', String(isActive));
+        });
+
+        if (topLabel) topLabel.textContent = pane.dataset.title || '';
+        if (bottomLabel) bottomLabel.textContent = pane.dataset.plates || '';
+        if (artstationLink && pane.dataset.artstation) {
+            artstationLink.href = pane.dataset.artstation;
+            artstationLink.setAttribute('aria-label', `View ${pane.dataset.title} on ArtStation`);
+        }
+    }
+
+    panes.forEach(pane => {
+        pane.addEventListener('click', () => {
+            if (pane.classList.contains('active')) return;
+            activate(pane);
+        });
+        pane.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                if (!pane.classList.contains('active')) activate(pane);
+            }
+        });
+    });
+}
 
 // Smooth scrolling
 function initSmoothScroll() {

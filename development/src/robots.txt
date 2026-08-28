@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /page-atelier/atelier-feature-volume-1.html
+Disallow: /page-atelier/atelier-feature-volume-2.html
+Disallow: /page-projects/template.html
+
+Sitemap: https://luthandomapekula.github.io/Portfolio-Website/sitemap.xml
